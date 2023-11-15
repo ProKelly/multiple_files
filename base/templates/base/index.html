@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<section class="flex-column flex-center">
+    <form action="" enctype="multipart/form-data" method="post">
+        <h2>File uploader</h2>
+        <hr>
+
+        {% csrf_token %}
+        <input type="file" multiple name="files" required>
+        <button type="Submit" class="btn-primary">Submit</button>
+    </form>
+    <div>
+        <h3>{{new_url}}</h3>
+    </div>
+</section>
+{% endblock content %}
