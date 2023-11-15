@@ -5,7 +5,7 @@
     <form action="" enctype="multipart/form-data" method="post">
         <h2>File uploader</h2>
         <hr>
-
+        
         {% csrf_token %}
         <input type="file" multiple name="files" required>
         <button type="Submit" class="btn-primary">Submit</button>
