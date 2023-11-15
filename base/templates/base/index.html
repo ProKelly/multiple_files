@@ -10,8 +10,11 @@
         <input type="file" multiple name="files" required>
         <button type="Submit" class="btn-primary">Submit</button>
     </form>
-    <div>
-        <h3>{{new_url}}</h3>
+    <div class="flex-row flex-center" style="margin: 0px 0px;">
+        {% comment %} <h3>{{new_urls}}</h3> {% endcomment %}
+        {% for url in new_urls %}
+            <img src="{{url}}" alt="image" width="150" height="150" title="{{url}}">
+        {% endfor %}      
     </div>
 </section>
 {% endblock content %}
